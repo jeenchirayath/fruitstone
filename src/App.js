@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Container from './Components/Container';
+import Paper from '@mui/material/Paper';
+import Image from './Images/Image.jpg';
+
+const styles = {
+  paperContainer: {
+      backgroundImage: `url(${Image})`,
+      height: "953px",
+      backgroundSize:'cover',
+      backgroundPosition:'50px'
+     
+
+  }
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Paper style={styles.paperContainer} variant="elevation">
+        <Container />
+      </Paper>
+
     </div>
   );
 }
